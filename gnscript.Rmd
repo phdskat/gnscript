@@ -9,11 +9,6 @@ library(tidyverse)
 library(TraMineR)
 library(cluster)
 
-df = cvgg %>% 
-  gather(key="year",value="code",-no,-id,-init) %>%
-  mutate(year = as.numeric(year), no = as.numeric(no)) %>% 
-  select(no,year,code)
-
 # this script uses a 'df' data object in a long format, with three columns ('no','year','code'), containing, respectively, information about the career sequence identifier, the year of the career, and the coding (sequence state).
 
 # defining colour palettes based on expertise and sector
